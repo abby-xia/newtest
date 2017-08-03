@@ -10,3 +10,25 @@
 <![endif]-->
 <!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!-->
 <html <?php language_attributes(); ?>>
+<head>
+	<meta charset="<?php bloginfo( 'charset' ); ?>" />
+	<?php elegant_description(); ?>
+	<?php elegant_keywords(); ?>
+	<?php elegant_canonical(); ?>
+
+	<?php do_action( 'et_head_meta' ); ?>
+
+	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
+
+	<?php $template_directory_uri = get_template_directory_uri(); ?>
+	<!--[if lt IE 9]>
+	<script src="<?php echo esc_url( $template_directory_uri . '/js/html5.js"' ); ?>" type="text/javascript"></script>
+	<![endif]-->
+
+	<script type="text/javascript">
+		document.documentElement.className = 'js';
+	</script>
+
+	<?php wp_head(); ?>
+		      	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
